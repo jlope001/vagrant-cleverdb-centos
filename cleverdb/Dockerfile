@@ -1,13 +1,8 @@
-FROM centos:centos6
+FROM centos:centos7
 
 MAINTAINER Jose Lopez "jlope001@gmail.com"
 
-# Enable EPEL Repository
-RUN su -c 'rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm'
-RUN yum -y update
-
 # install dependencies
-RUN yum -y update
 RUN yum install -y wget mysql rsyslog which openssh-clients
 
 # install agent
